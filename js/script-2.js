@@ -501,3 +501,34 @@
 // console.log(isNumberInRange(10, 30, 5));
 // console.log(isNumberInRange(20, 50, 24));
 // console.log(isNumberInRange(20, 50, 76));
+
+//            --- Логічне «АБО» ||  -----
+
+//        !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+// Функція checkAccess(subType) перевіряє,
+// чи може користувач отримати доступ до контенту.
+// Перевірка відбувається за типом передплати.
+// Використовуючи оператор "АБО",
+// доповни код функції так,
+// щоб якщо значення параметра subType
+// дорівнює рядкам "pro" або "vip",
+// то функція повертала true і користувач отримував доступ.
+//  В іншому випадку повертала false.
+
+// Оголошена функція checkAccess(subType)
+// Використано оператор ||
+// Виклик checkAccess("pro") повертає true
+// Виклик checkAccess("starter") повертає false
+// Виклик checkAccess("vip") повертає true
+// Виклик checkAccess("free") повертає false
+
+function checkAccess(subType) {
+  const checkAccess = "pro" || "vip";
+
+  return checkAccess;
+}
+
+console.log(checkAccess("pro"));
+console.log(checkAccess("starter"));
+console.log(checkAccess("vip"));
+console.log(checkAccess("free"));
