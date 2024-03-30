@@ -443,7 +443,9 @@
 // 4. null
 // 5. underfined
 // 6. false
+
 //         ---- Логічне «І» &&  -----
+
 // console.log("hello" && 5); // 5
 // console.log(5 && "hello"); // "hello"
 
@@ -505,6 +507,7 @@
 //            --- Логічне «АБО» ||  -----
 
 //        !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
 // Функція checkAccess(subType) перевіряє,
 // чи може користувач отримати доступ до контенту.
 // Перевірка відбувається за типом передплати.
@@ -522,13 +525,111 @@
 // Виклик checkAccess("vip") повертає true
 // Виклик checkAccess("free") повертає false
 
-function checkAccess(subType) {
-  const checkAccess = "pro" || "vip";
+// function checkAccess(subType) {
+//   const numb = subType === "pro" || subType === "vip";
+//   return numb;
+// }
 
-  return checkAccess;
-}
+// console.log(checkAccess("pro"));
+// console.log(checkAccess("starter"));
+// console.log(checkAccess("vip"));
+// console.log(checkAccess("free"));
 
-console.log(checkAccess("pro"));
-console.log(checkAccess("starter"));
-console.log(checkAccess("vip"));
-console.log(checkAccess("free"));
+//   -----    Логічне «НІ» !  ------
+
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!3); // !3 -> !true -> false
+// console.log(!"Mango"); // !"Mango" -> !true -> false
+// console.log(!0); // !0 -> !false -> true
+// console.log(!""); // !"" -> !false -> true
+// console.log(!null); // !null -> !false -> true
+
+// !true;
+// !3;
+// !"Mango";
+// 0;
+// "";
+// null;
+
+// console.log(!null);
+
+// const isBlocked = false;
+// const canChat = !isBlocked; // !false -> true
+
+// if (canChat) {
+//   console.log("Can type in chat!");
+// } else {
+//   console.log("Blocked from typing in chat!");
+// }
+
+// const isBlocked = true;
+// const canChat = !isBlocked; // !false -> true;
+// // !true -> false;
+// if (canChat) {
+//   console.log("Can type in chat!");
+// } else {
+//   console.log("Blocked from typing in chat!");
+// }
+
+// const isOnline = true;
+// const isBlocked = false;
+// const canChat = isOnline && !isBlocked;
+// // true && !false -> true && true -> true
+
+// if (canChat) {
+//   console.log("Can type in chat!");
+// } else {
+//   console.log("Blocked from typing in chat!");
+// }
+
+//      !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція toggleModalVisibility(isVisible)
+// перемикає стан відображення модального вікна.
+// У параметрі isVisible вона очікує буль true або false.
+// Доповни код функції так, щоб вона повертала
+// протилежне значення цього параметра.
+
+// Оголошена функція toggleModalVisibility(isVisible)
+// Виклик toggleModalVisibility(true) повертає false
+// Виклик toggleModalVisibility(false) повертає true
+// Використано оператор !
+
+// function toggleModalVisibility(isVisible) {
+//   const modalWind = !isVisible;
+
+//   return modalWind;
+// }
+// console.log(toggleModalVisibility(true));
+// console.log(toggleModalVisibility(false));
+
+//            ----- Властивості -----
+
+// Властивості — це описові характеристики сутності.
+// У прикладі з кавою — це колір, кількість цукру,
+// температура.
+
+//objectName.property - властивість;
+
+// const message = "JavaScript is awesome";
+// console.log(message.length); // 21
+
+// const message = "Роман Іванович Білокур ";
+// console.log(message.length);
+
+//            ----- Методи ----
+
+// Методи — це дії, які можна виконати із сутністю,
+// такі як додати цукор чи підігріти
+
+// objectName.method();
+
+// const message = "JavaScript is awesome";
+// console.log(message.toUpperCase()); //
+//"JAVASCRIPT IS AWESOME"
+
+// const message = "Роман Іванович Білокур ";
+// console.log(message.toUpperCase());
+
+//           --- Метод slice() ---
