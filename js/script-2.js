@@ -633,3 +633,167 @@
 // console.log(message.toUpperCase());
 
 //           --- Метод slice() ---
+
+// const fullName = "Jacob Mercer";
+// console.log(fullName.slice(0, 4)); // 'Jaco'
+// console.log(fullName.slice(3, 9)); // 'ob Mer'
+// console.log(fullName.slice(0, fullName.length)); // 'Jacob Mercer'
+
+// const fullName = "Василій Бураківський";
+// console.log(fullName.slice(1, 9));
+
+//        !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція getSubstring(string, length) приймає рядок
+// і повертає новий підрядок (його часткову копію).
+// Вона оголошує два параметри, значення яких будуть
+// задаватися під час її виклику:
+
+// string - оригінальний рядок
+// length - довжина нового підрядка
+// Доповни код функції так, щоб вона повертала
+// новий підрядок, який починається від початку string
+// і має довжину length.
+
+// Оголошена функція getSubstring(string, length)
+// Виклик функції getSubstring("Hello world", 3) повертає
+// "Hel"
+// Виклик функції getSubstring("Hello world", 5) повертає
+// "Hello"
+// Виклик функції getSubstring("Hello world", 8) повертає
+// "Hello wo"
+// Виклик функції getSubstring("Hello world", 11) повертає
+// "Hello world"
+// Виклик функції getSubstring("Hello world", 0) повертає
+// ""
+
+// function getSubstring(string, length) {
+//   const strings = string;
+//   const finString = strings.slice(0, length);
+
+//   return finString;
+// }
+
+// // console.log(getSubstring("Hello world", 3));
+// // console.log(getSubstring("Hello world", 5));
+// // console.log(getSubstring("Hello world", 8));
+// // console.log(getSubstring("Hello world", 11));
+// // console.log(getSubstring("Hello world", 0));
+
+//    ----- Методи toLowerCase() і toUpperCase() -----
+
+// const message = "Welcome to Bahamas!";
+// console.log(message.toLowerCase()); // "welcome to bahamas!"
+// console.log(message); // "Welcome to Bahamas!"
+
+// const message = "Василь Бураковський";
+// console.log(message.toLowerCase());
+// console.log(message.toUpperCase());
+// console.log(message);
+
+// const brandName = "samsung";
+// const userInput = "saMsUng";
+// const lowercaseInput = userInput.toLowerCase();
+
+// console.log(brandName); // 'samsung'
+// console.log(userInput); // 'saMsUng'
+// console.log(userInput === brandName); // false
+// console.log(lowercaseInput); // 'samsung'
+// console.log(lowercaseInput === brandName); // true
+
+// const brandName = "таврія";
+// const userInput = "ТавРія";
+// const lowercaseInput = userInput.toLowerCase();
+// console.log(lowercaseInput);
+
+//      !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція normalizeInput(input, to) оголошує два параметри:
+// input - рядок, який потрібно привести до певного регістру
+// to - рядок с двома можливими значеннями:
+// "upper" або "lower", що вказують до якого регістру
+// потрібно привести значення input
+// Доповни код функції таким чином, щоб:
+
+// Якщо значення параметра to — це рядок "upper",
+// то функція повертала копію рядка input,
+// але у верхньому регістрі
+// В іншому разі, функція повертала копію рядка
+// inputу нижньому регістрі
+// Оголошена функція normalizeInput(input, to)
+// Виклик функції normalizeInput("This ISN'T SpaM", "lower")
+// повертає "this isn't spam"
+// Виклик функції normalizeInput("This ISN'T SpaM", "upper")
+// повертає "THIS ISN'T SPAM"
+// Виклик функції normalizeInput("Big SALE", "lower")
+// повертає "big sale"
+// Виклик функції normalizeInput("Big SALE", "upper")
+// повертає "BIG SALE"
+// Виклик функції normalizeInput("Stay Awhile and Listen", "lower")
+// повертає "stay awhile and listen"
+// Виклик функції normalizeInput("Stay Awhile and Listen", "upper")
+// повертає "STAY AWHILE AND LISTEN"
+
+// function normalizeInput(input, to) {
+//   if (to === "upper") {
+//     return input.toUpperCase();
+//   } else if (to === "lower") {
+//     return input.toLowerCase();
+//   }
+// }
+// console.log(normalizeInput("This ISN'T SpaM", "lower"));
+// console.log(normalizeInput("This ISN'T SpaM", "upper"));
+// console.log(normalizeInput("Big SALE", "lower"));
+// console.log(normalizeInput("Big SALE", "upper"));
+// console.log(normalizeInput("Stay Awhile and Listen", "lower"));
+// console.log(normalizeInput("Stay Awhile and Listen", "upper"));
+
+// function checkStorage(available, ordered) {
+//   if ((available >= 0, ordered === 0)) {
+//     return `There are no products in the order!`;
+//   } else if (available < ordered) {
+//     return `Your order is too large, there are not enough items in stock!`;
+//   } else {
+//     return `The order is accepted, our manager will contact you`;
+//   }
+// }
+
+//       ----- Метод includes() -----
+
+// Функція checkForName(fullName, firstName) приймає два
+// параметри та повертає буль true або false - результат
+// перевірки входження підрядка firstName у рядок fullName.
+
+// fullName - рядок, що містить повне ім'я
+// firstName - рядок, що містить ім'я для перевірки його входження в повне ім'я
+// Доповни тіло функції таким чином, щоб вона повертала
+// результат перевірки входження імені (параметр firstName),
+// у повне ім'я (параметр fullName).
+// Врахуй, що регістр символів в параметрах fullName
+// і firstName наперед не відомий. Перед перевіркою входження
+// не забудь прирівняти їх до однакового регістру.
+
+// Оголошена функція checkForName(fullname, firstName)
+// Виклик функції checkForName("Jason Neis", "Jason") повертає
+// true
+// Виклик функції checkForName("Jason Neis", "jAsOn") повертає
+// true
+// Виклик функції checkForName("Jason Neis", "Jacob") повертає
+// false
+// Виклик функції checkForName("Caty Stars", "Caty") повертає
+// true
+// Виклик функції ("Caty Stars", "cAtY") повертає
+// true
+// Виклик функції checkForName("Caty Stars", "Andromeda")
+// повертає false
+
+function checkForName(fullName, firstName) {
+  const message = fullName;
+  const hasSpan = message.includes(firstName);
+  return hasSpan;
+}
+console.log(checkForName("Jason Neis", "Jason"));
+console.log(checkForName("Jason Neis", "jAsOn"));
+console.log(checkForName("Jason Neis", "Jacob"));
+console.log(checkForName("Caty Stars", "Caty"));
+console.log(checkForName("Caty Stars", "cAtY"));
