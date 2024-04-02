@@ -760,6 +760,8 @@
 
 //       ----- Метод includes() -----
 
+//       !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
 // Функція checkForName(fullName, firstName) приймає два
 // параметри та повертає буль true або false - результат
 // перевірки входження підрядка firstName у рядок fullName.
@@ -787,13 +789,86 @@
 // Виклик функції checkForName("Caty Stars", "Andromeda")
 // повертає false
 
-function checkForName(fullName, firstName) {
-  const message = fullName;
-  const hasSpan = message.includes(firstName);
-  return hasSpan;
-}
-console.log(checkForName("Jason Neis", "Jason"));
-console.log(checkForName("Jason Neis", "jAsOn"));
-console.log(checkForName("Jason Neis", "Jacob"));
-console.log(checkForName("Caty Stars", "Caty"));
-console.log(checkForName("Caty Stars", "cAtY"));
+// function checkForName(fullName, firstName) {
+//   const message = fullName;
+//   const message1 = firstName;
+//   const tolowercase = message.toLowerCase();
+//   const tolowercase1 = message1.toLowerCase();
+//   const hasSpan = tolowercase.includes(tolowercase1);
+//   return hasSpan;
+// }
+// console.log(checkForName("Jason Neis", "Jason"));
+// console.log(checkForName("Jason Neis", "jAsOn"));
+// console.log(checkForName("Jason Neis", "Jacob"));
+// console.log(checkForName("Caty Stars", "Caty"));
+// console.log(checkForName("Caty Stars", "cAtY"));
+// console.log(checkForName("Caty Stars", "Andromeda"));
+
+//    ----- Методи startsWith() і endsWith() -----
+
+//const str = "Hello, world!";
+
+//console.log(str.startsWith("Hello")); // true
+//console.log(str.startsWith("hello")); // false (метод чутливий до регістру)
+
+// const rum = "Василий Іванович";
+// rum.startsWith("Василий");
+// console.log(rum.startsWith("Вас"));
+
+// const str = "Hello, world!";
+
+// console.log(str.endsWith("world!")); // true
+// console.log(str.endsWith("World!")); // false (метод чутливий до регістру)
+
+// const rum = "Василий Іванович";
+// console.log(rum.endsWith("Іванович"));
+
+//        !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція checkFileExtension(fileName, ext) приймає
+// два параметри:
+
+// fileName - рядок, що зберігає ім'я файлу з розширенням,
+//  наприклад, styles.css, hello.js тощо.
+// ext - рядок, що зберігає розширення,
+// наприклад, .css, .js тощо
+// Доповни код функції так, щоб:
+
+// Якщо ім'я файлу fileName закінчується розширенням,
+// зазначеним у параметрі ext, то функція повертала рядок
+//  "File extension matches"
+// В іншому разі, функція повертала рядок
+// "File extension does not match"
+
+// Оголошена функція checkFileExtension(fullname, name)
+// Виклик функції checkFileExtension("styles.css", ".css")
+//  повертає "File extension matches"
+// Виклик функції checkFileExtension("styles.css", ".js")
+//  повертає "File extension does not match"
+// Виклик функції checkFileExtension("app.js", ".js")
+//  повертає "File extension matches"
+// Виклик функції checkFileExtension("app.js", ".html")
+//  повертає "File extension does not match"
+// Виклик функції checkFileExtension("index.html", ".html")
+//  повертає "File extension matches"
+// Виклик функції checkFileExtension("index.html", ".css")
+//  повертає "File extension does not match"
+// Виклик функції checkFileExtension("index.html", ".js")
+//  повертає "File extension does not match"
+
+// function checkFileExtension(fileName, ext) {
+//   const message = fileName;
+//   const str1 = message.endsWith(ext);
+//   if ((message, str1)) {
+//     return `File extension matches`;
+//   } else {
+//     return `File extension does not match`;
+//   }
+// }
+// console.log(checkFileExtension("styles.css", ".css"));
+// console.log(checkFileExtension("styles.css", ".js"));
+// console.log(checkFileExtension("app.js", ".js"));
+// console.log(checkFileExtension("app.js", ".html"));
+// console.log(checkFileExtension("index.html", ".html"));
+// console.log(checkFileExtension("index.html", ".css"));
+// console.log(checkFileExtension("index.html", ".js"));
