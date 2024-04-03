@@ -872,3 +872,66 @@
 // console.log(checkFileExtension("index.html", ".html"));
 // console.log(checkFileExtension("index.html", ".css"));
 // console.log(checkFileExtension("index.html", ".js"));
+
+//          ----- Метод indexOf() -----
+
+// const message = "Welcome to Bahamas!";
+// const index = message.indexOf("to");
+// console.log(index); // 8
+
+// const message = "Привіт Андрій ну де ти був!";
+// const index = message.indexOf("ну");
+// console.log(index);
+
+//       !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція getFileName(file) приймає один параметр
+
+// file - рядок з іменем файлу. Ім'я файлу може бути
+// з розширенням, наприклад: styles.css, app.js або без,
+// наприклад: styles, app.
+// Використовуючи методи indexOf та slice,
+// доповни код функції таким чином, щоб:
+
+// Вона перевіряла наявність розширення в імені
+// файлу (назва розширення відокремлюється від імені файла крапкою)
+// Якщо ім'я файлу не містить розширення,
+// то функція повертала новий підрядок,
+// що містить ім'я файлу без змін
+// В іншому разі функція повертала підрядок з іменем файлу,
+// але без розширення
+// Оголошена функція getFileName(file)
+// Виклик функції getFileName("styles.css") повертає "styles"
+// Виклик функції getFileName("app.js") повертає "app"
+// Виклик функції getFileName("app") повертає "app"
+// Виклик функції getFileName("index.js") повертає "index"
+// Виклик функції getFileName("index.html") повертає "index"
+// Виклик функції getFileName("index.css") повертає "index"
+// Виклик функції getFileName("index") повертає "index"
+
+function getFileName(file) {
+  if (file) {
+    const string = file;
+    const index = string.indexOf(".");
+    const finString = string.slice(0, index);
+    return finString;
+  } else {
+    const finString = string.startsWith(string);
+    return finString;
+  }
+}
+
+console.log(getFileName("styles.css"));
+console.log(getFileName("app.js"));
+console.log(getFileName("app"));
+console.log(getFileName("index.js"));
+console.log(getFileName("index.html"));
+console.log(getFileName("index.css"));
+console.log(getFileName("index"));
+
+// function getSubstring(string, length) {
+// //   const strings = string;
+// //   const finString = strings.slice(0, length);
+
+// //   return finString;
+// // }
