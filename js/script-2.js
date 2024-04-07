@@ -894,7 +894,8 @@
 // доповни код функції таким чином, щоб:
 
 // Вона перевіряла наявність розширення в імені
-// файлу (назва розширення відокремлюється від імені файла крапкою)
+// файлу (назва розширення відокремлюється від імені файла
+// крапкою)
 // Якщо ім'я файлу не містить розширення,
 // то функція повертала новий підрядок,
 // що містить ім'я файлу без змін
@@ -909,29 +910,94 @@
 // Виклик функції getFileName("index.css") повертає "index"
 // Виклик функції getFileName("index") повертає "index"
 
-function getFileName(file) {
-  if (file) {
-    const string = file;
-    const index = string.indexOf(".");
-    const finString = string.slice(0, index);
-    return finString;
-  } else {
-    const finString = string.startsWith(string);
-    return finString;
+// function getFileName(file) {
+//   const string = file;
+//   const index = string.indexOf(".");
+//   if (index === -1) {
+//     return string;
+//   } else {
+//     return string.slice(0, index);
+//   }
+// }
+
+// console.log(getFileName("styles.css"));
+// console.log(getFileName("app.js"));
+// console.log(getFileName("app"));
+// console.log(getFileName("index.js"));
+// console.log(getFileName("index.html"));
+// console.log(getFileName("index.css"));
+// console.log(getFileName("index"));
+
+//            ------  Метод trim() -----
+
+//              !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+// Функція createFileName(name, ext) приймає два параметри:
+// name - рядок, що зберігає ім'я файлу без розширення,
+// яке вводить користувач. Воно може містити зайві пробіли
+// на початку або в кінці рядка, наприклад "order ",
+// " finance " тощо
+// ext - рядок, що зберігає розширення, наприклад "txt", "xml"
+// тощо
+// Використовуючи синтаксис шаблонних рядків і метод trim(),
+// доповни код функції таким чином, щоб вона повертала повне
+// (об'єднане) ім'я файлу з доданим розширенням,
+// зазначеним у параметрі ext у форматі ім'я.розширення.
+// Також повне ім'я файлу не повинно містити зайвих пробілів
+// на початку або наприкінці.
+
+// Оголошена функція createFileName(name, ext)
+// Виклик функції createFileName(" order ", "txt")
+// повертає "order.txt"
+// Виклик функції createFileName("report ", "csv")
+// повертає "report.csv"
+// Виклик функції createFileName(" presentation", "xml")
+// повертає "presentation.xml"
+
+// function createFileName(name, ext) {
+//   const firstName = name;
+//   const fullName = firstName.trim();
+//   return `${fullName}.${ext}`;
+// }
+
+// console.log(createFileName(" order ", "txt"));
+// console.log(createFileName("report ", "csv"));
+// console.log(createFileName(" presentation", "xml"));
+
+// let count = 0;
+
+// while (count < 10) {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// }
+
+//               !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
+
+// Функція calculateTotal(number) приймає ціле
+// число (параметр number). Доповни код функції так,
+// щоб вона повертала суму всіх цілих чисел
+// від одиниці до цього числа включно. Наприклад,
+// якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+
+// Оголошена функція calculateTotal(number)
+// Виклик функції calculateTotal(1) повертає 1
+// Виклик функції calculateTotal(3) повертає 6
+// Виклик функції calculateTotal(0) повертає 0
+// Виклик функції calculateTotal(18) повертає 171
+// Виклик функції calculateTotal(24) повертає 300
+// Виклик функції calculateTotal() з випадковим числом
+// повертає правильне значення
+
+function calculateTotal(number) {
+  const count = number;
+  const totl = count + 1;
+  while (totl) {
+    totl += count;
   }
 }
 
-console.log(getFileName("styles.css"));
-console.log(getFileName("app.js"));
-console.log(getFileName("app"));
-console.log(getFileName("index.js"));
-console.log(getFileName("index.html"));
-console.log(getFileName("index.css"));
-console.log(getFileName("index"));
-
-// function getSubstring(string, length) {
-// //   const strings = string;
-// //   const finString = strings.slice(0, length);
-
-// //   return finString;
-// // }
+console.log(calculateTotal(1));
+console.log(calculateTotal(3));
+console.log(calculateTotal(0));
+console.log(calculateTotal(18));
+console.log(calculateTotal(24));
+console.log(calculateTotal());
