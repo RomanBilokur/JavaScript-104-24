@@ -970,13 +970,73 @@
 //   count += 1;
 // }
 
+//         ----- Цикли; -----
+
+// Цикл — керуюча конструкція, призначена для організації
+// багаторазового виконання набору інструкцій.
+// Тіло циклу — послідовність інструкцій, призначена
+// для багаторазового виконання.
+// Ітерація — одиничне виконання тіла циклу.
+// Умова виходу — вираз, що визначає, чи буде в черговий
+// раз виконуватися ітерація, або цикл завершиться.
+
+//         ----- Цикл while -----
+
+// while (condition) {
+//   statement; // код, тіло циклу
+// }
+// let count = 2;
+// while (count < 11) {
+//   console.log(`Count:${count}`);
+//   count += 2;
+// }
+
+// let clientCounter = 18;
+// const maxClients = 25;
+// while (clientCounter < maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+
 //               !!!! ЗАДАЧА З АВТОПЕРЕВІРКИ !!!!
 
 // Функція calculateTotal(number) приймає ціле
 // число (параметр number). Доповни код функції так,
 // щоб вона повертала суму всіх цілих чисел
 // від одиниці до цього числа включно. Наприклад,
-// якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+// якщо number дорівнює 3, то сума - це 1 + 2 + 3,
+// тобто 6.
+
+// function calculateTotal(number) {
+//   let totalNamber = number;
+//   const numb = 1;
+
+//   while (numb + totalNamber) {
+//     totalNamber += numb;
+//   }
+//   return totalNamber;
+// }
+// console.log(calculateTotal(1));
+
+// function calculateTotal(number) {
+//   let total = 0;
+//   for (let i = 1; i <= number; i++) {
+//     total += i;
+//   }
+//   return total;
+// }
+// console.log(calculateTotal(2));
+
+function calculateTotal(number) {
+  let total = 0;
+  let numb = 0;
+  while (numb < number) {
+    total += numb;
+    numb++;
+  }
+  return total;
+}
+console.log(calculateTotal(3));
 
 // Оголошена функція calculateTotal(number)
 // Виклик функції calculateTotal(1) повертає 1
@@ -987,17 +1047,17 @@
 // Виклик функції calculateTotal() з випадковим числом
 // повертає правильне значення
 
-function calculateTotal(number) {
-  const count = number;
-  const totl = count + 1;
-  while (totl) {
-    totl += count;
-  }
-}
+// function calculateTotal(number) {
+//   const count = number;
+//   const totl = count + 1;
+//   while (totl) {
+//     totl += count;
+//   }
+// }
 
-console.log(calculateTotal(1));
-console.log(calculateTotal(3));
-console.log(calculateTotal(0));
-console.log(calculateTotal(18));
-console.log(calculateTotal(24));
-console.log(calculateTotal());
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(0));
+// console.log(calculateTotal(18));
+// console.log(calculateTotal(24));
+// console.log(calculateTotal());
